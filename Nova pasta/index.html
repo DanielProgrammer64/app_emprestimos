@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de empréstimos</title>
+    <link href="Style.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1> Empréstimos</h1>
+    <table>
+        <tr>
+            <th> Insira os dados do empréstimo: </th>
+            <td></td>
+            <th>Saldo do empréstimo, patrimônio líquido acumulado e pagamentos de juros</th>
+        </tr>
+        <tr>
+            <td>    </td>
+            <td><input id="quantia" type="number" onchange="Calcular()"></td>
+
+            <td rowspan=8> <canvas id="gráfico" width="400" height="250"></canvas> </td>
+        </tr>
+        <tr>
+            <td> Juros Anual (%): </td>
+            <td> <input id="apr" type="number" onchange="Calcular()"> </td>
+        </tr>
+        <tr>
+            <td> Período de Reembolso (anos): </td>
+            <td> <input id="anos" type="number" onchange="Calcular();"> </td>
+        </tr>
+        <tr>
+            <td>Cep (para encontrar suas Instituições financeiras): </td>
+            <td><input type="number" id="Cep" onchange="Calcular()"> </td>
+        </tr>
+        <tr>
+            <th>Pagamentos aproximados: </th>
+            <td><button onclick="Calcular()">Calcular</button></td>
+        </tr>
+
+        <tr>
+            <td>Pagamento mensal: </td>
+            <td>$<span class="saída" id="pagamento"></span></td>
+        </tr>
+        <tr>
+            <td>Pagamento total: </td>
+            <td>$<span class="saída" id="Total"></span></td> </tr>
+        <tr>
+            <td>Juros total: </td>
+            <td>$ <span class="saída" id="Juros_total"></span></td>
+        </tr>
+        <tr>
+            <th>Patrocinadores: </th>
+            <td colspan="2">Solicite seu empréstimo com uma destas excelentes Instituições financeiras: <div id="Inst_Finan"></div> </td>
+        </tr>
+        
+
+    </table>
+
+    <script defer src="Sketch.js"></script>
+</body>
+
+</html>
